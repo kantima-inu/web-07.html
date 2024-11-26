@@ -1,0 +1,130 @@
+<body>
+    <div class="jumbotron p-5 bg-info text-white rounded">
+        <video src="https://videos.pond5.com/dog-swimming-footage-120735682_main_xxl.mp4" autoplay loop muted></video>
+        <div class= "header_text">
+        <h1>KANTIMA INTUWANNARAT</h1>
+        <p>RYTC IT RAYONG</p>
+        <div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="page1.html">Page1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="page2.html">Page2</a>
+              <li class="nav-item">   
+                <li class="nav-item">
+                  <a class="nav-link" href="page3.html">Page3</a>
+                <li class="nav-item">                                            
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+                <button class="btn btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                type="">Login</button>
+              </li>
+            </ul>
+             
+             
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="">Search</button>
+               type=""
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="user" placeholder="">
+                        <label>Username</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="pass" placeholder="">
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let user = 'face'
+        let pass = 'xyz'
+
+        if() {
+
+
+        }
+
+        if (document.getElementById('user').value == user &&
+            document.getElementById('pass').value == pass) {
+                alert('Login OK')
+
+            } else {
+                alert('Login Fail')
+            }
+    
+            function check_login() {
+        if (document.getElementById('user').value != null &&
+            document.getElementById('pass').value) {
+            if (document.getElementById('user').value == localStorage.getItem('user') &&
+                document.getElementById('pass').value == localStorage.getItem('pass')) {
+                sessionStorage.setItem('user', document.getElementById('user').value)
+                alert('Login OK')
+            } else {
+                alert('Login Fail')
+            }
+            clear_input()
+        }
+    }
+
+    function clear_input() {
+        document.getElementById('user').value = null
+        document.getElementById('pass').value = null
+    }
+    function check_logout(){
+        sessionStorage.removeItem('user')
+        //location.href = 'index.html'
+        document.getElementById('log_info').innerHTML = ''
+
+    }
+
+
+
+</scrip>
+  
+        
